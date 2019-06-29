@@ -19,7 +19,7 @@ class App extends React.Component {
     $.ajax({
       type: 'POST',
       url: 'http://localhost:1128/repos',
-      data: JSON.stringify(data),
+      data: JSON.stringify(term),
       success: (data) => {
         console.log('ClientSide: Search Request successful...\n', data);
       },
@@ -31,11 +31,13 @@ class App extends React.Component {
   }
 
   render() {
-    return (<div>
-      <h1>Github Fetcher</h1>
-      <RepoList repos={this.state.repos} />
-      <Search onSearch={this.search} />
-    </div>)
+    return (
+      <div>
+        <h1>-Github Fetcher</h1>
+        <RepoList repos={this.state.repos} />
+        <Search onSearch={this.search} />
+      </div>
+    )
   }
 }
 
