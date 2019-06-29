@@ -13,4 +13,5 @@ let save = (/* TODO */) => {
   // the MongoDB
 }
 
+console.log('Mongoose connected');
 module.exports.save = save;
